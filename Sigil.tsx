@@ -2,7 +2,7 @@
    of the relationship. Hold it long enough and it yields a secret. */
 
 import { useRef, useState } from "react";
-import { buzz } from "../lib/memory";
+import { buzz } from "./lib/memory";
 
 interface Props {
   stage: number;
@@ -46,10 +46,8 @@ export default function Sigil({ stage, size = 46, onHoldComplete, holdMs = 1500 
       style={{ width: size + 14, height: size + 14, touchAction: "none" }}
     >
       <svg width={size + 14} height={size + 14} viewBox="0 0 60 60" className="anim-breathe">
-        {/* nucleus */}
         <circle cx="30" cy="30" r="4.5" fill="var(--acc)" />
         <circle cx="30" cy="30" r="8" fill="none" stroke="var(--ink)" strokeOpacity="0.5" strokeWidth="1" />
-        {/* growth rings, one per stage */}
         {rings.map((i) => {
           const visible = stage > i;
           const r = 13 + i * 5.5;
@@ -83,7 +81,6 @@ export default function Sigil({ stage, size = 46, onHoldComplete, holdMs = 1500 
         })}
       </svg>
 
-      {/* hold-progress arc */}
       {holding && (
         <svg
           width={size + 14}
