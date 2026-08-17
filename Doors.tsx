@@ -3,10 +3,10 @@
 
 import { useState } from "react";
 import Scramble from "./Scramble";
-import { buzz } from "../lib/memory";
-import { DOORS, doorById } from "../lib/whispers";
-import { useMemory } from "../lib/useMemory";
-import { audio } from "../lib/audio";
+import { buzz } from "./lib/memory";
+import { DOORS, doorById } from "./lib/whispers";
+import { useMemory } from "./lib/useMemory";
+import { audio } from "./lib/audio";
 
 function DoorPattern({ id, hue }: { id: string; hue: number }) {
   const stroke = `hsl(${hue} 48% 62% / 0.55)`;

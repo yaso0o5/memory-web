@@ -12,8 +12,8 @@ import {
   fmtDur,
   memoryScore,
   traceCount,
-} from "../lib/memory";
-import { useMemory } from "../lib/useMemory";
+} from "./lib/memory";
+import { useMemory } from "./lib/useMemory";
 
 interface Props {
   open: boolean;

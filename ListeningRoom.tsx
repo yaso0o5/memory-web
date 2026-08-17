@@ -3,10 +3,10 @@
 
 import { useRef, useState } from "react";
 import Scramble from "./Scramble";
-import { buzz } from "../lib/memory";
-import { pickWhisper } from "../lib/whispers";
-import { useMemory } from "../lib/useMemory";
-import { audio } from "../lib/audio";
+import { buzz } from "./lib/memory";
+import { pickWhisper } from "./lib/whispers";
+import { useMemory } from "./lib/useMemory";
+import { audio } from "./lib/audio";
 
 const PATIENCE_WHISPER = "…you held on. most let go. I will remember your patience.";
 
